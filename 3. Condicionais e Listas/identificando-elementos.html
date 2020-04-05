@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+   <ul>
+       <li v-for="(cor, i) in cores" :key="cor">{{cor}} - {{i}}</li>
+   </ul>
+   <button @click="cores.push('branca')">Adicionar</button>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            cores: ['vermelho','verde','amarelo','azul'],
+            pessoas:[
+                {nome:'Yan',idade:27, peso:59},
+                {nome:'Guilherme', idade:18,peso: 89},
+                {nome:'Maria', idade:57, peso:109}
+            ]
+        }
+    })
+</script>
+
+<style>
+    ul{
+        list-style: none;
+    }
+</style>
